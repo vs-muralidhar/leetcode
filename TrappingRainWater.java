@@ -1,7 +1,7 @@
 // problem statement : https://leetcode.com/problems/trapping-rain-water/
 public class TrappingRainWater {
 
-    public int trap(int[] height) {
+    public static int trap(int[] height) {
         if (height.length == 0) return 0;
 
         int left = 0, right = height.length - 1;
@@ -21,5 +21,10 @@ public class TrappingRainWater {
         }
 
         return ans;
+    }
+
+    public static void main(String[] args) {
+        int[] height = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+        System.out.println("Trapped Rain Water is " + trap(height) + " units");
     }
 }
